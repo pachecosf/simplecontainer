@@ -1,0 +1,8 @@
+FROM iron/go:dev
+MAINTAINER Austin Wimberley
+WORKDIR /main
+# Add the source code:
+ENV SRC_DIR=/main/
+ADD . /main/
+# Build it:
+RUN go build -o main
